@@ -11,7 +11,7 @@
     , push = 'push', domContentLoaded = 'DOMContentLoaded', readyState = 'readyState'
     , addEventListener = 'addEventListener', onreadystatechange = 'onreadystatechange'
 
-  function every(ar, fn, i) {
+  function every(ar, fn, i, j) {
     for (i = 0, j = ar.length; i < j; ++i) if (!fn(ar[i])) return f
     return 1
   }
