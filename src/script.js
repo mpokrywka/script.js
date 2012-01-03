@@ -7,7 +7,7 @@
     , head = doc.getElementsByTagName('head')[0]
     , validBase = /^https?:\/\//
     , old = win.$script, list = {}, ids = {}, delay = {}, scriptpath
-    , scripts = {}, s = 'string', f = false
+    , scripts = {'': 2}, s = 'string', f = false
     , push = 'push', domContentLoaded = 'DOMContentLoaded', readyState = 'readyState'
     , addEventListener = 'addEventListener', onreadystatechange = 'onreadystatechange'
 
