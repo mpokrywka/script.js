@@ -68,7 +68,7 @@
       , loaded = f
     el.onload = el.onerror = el[onreadystatechange] = function () {
       if ((el[readyState] && !(/^c|loade/.test(el[readyState]))) || loaded) return;
-      el.onload = el[onreadystatechange] = null
+      el.onload = el.onerror = el[onreadystatechange] = null
       loaded = 1
       scripts[path] = 2
       fn()
