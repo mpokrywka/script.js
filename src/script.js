@@ -9,7 +9,9 @@
     , old = win.$script, list = {}, ids = {}, delay = {}, scriptpath
     , scripts = {'': 2}, s = 'string', f = false
     , push = 'push', domContentLoaded = 'DOMContentLoaded', readyState = 'readyState'
-    , addEventListener = 'addEventListener', onreadystatechange = 'onreadystatechange'
+    , opera = 'opera', version = 'version', addEventListener = 'addEventListener'
+    , onreadystatechange = (win[opera] && win[opera][version] && win[opera][version].call &&
+        parseFloat(win[opera][version]()) < 10) ? 0 : 'onreadystatechange'
 
   function every(ar, fn, i, j) {
     for (i = 0, j = ar.length; i < j; ++i) if (!fn(ar[i])) return f
