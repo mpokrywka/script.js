@@ -42,8 +42,8 @@
     }
     function callback() {
       if (!--queue) {
-        list[id] = 1
         if (done && done() === f) return;
+        list[id] = 1
         for (var dset in delay) {
           every(dset.split('|'), loopFn) && !each(delay[dset], loopFn) && (delay[dset] = [])
         }
